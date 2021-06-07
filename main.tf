@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    organization = "wescalefr"
+
+    workspaces {
+      name = "weshare-tfc-code-mlaude"
+    }
+  }
+}
+
 locals {
   personalities  = ["wild", "kind", "fearful", "aggressive", "hungry", "shy", "noisy", "hurt", "sleepy", "marvelous", "spooky", "sad"]
   species        = ["rabbit", "mouse", "dog", "cat", "horse", "badger", "giraffe", "whale", "snake", "pigeon", "trout", "hyena", "eagle"]
